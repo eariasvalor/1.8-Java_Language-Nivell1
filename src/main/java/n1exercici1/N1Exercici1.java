@@ -16,6 +16,7 @@ public class N1Exercici1 {
 
         Filter filter = new Filter();
         List<String> filteredList = filter.filterByLetter(names, "o");
+
         filteredList.forEach(System.out::println);
 
 
