@@ -5,7 +5,11 @@ import java.util.stream.Collectors;
 
 public class Filter {
     public List<String> filterByLetter(List<String> list, String letter){
-        return list.stream().filter(s -> s.toLowerCase().contains(letter)).collect(Collectors.toUnmodifiableList());
+        if (list == null || letter == null || letter.isEmpty()) {
+            throw new IllegalArgumentException("The list or the letter cannot be empty.");
+        }
+        String lowerLetter = letter.toLowerCase();
+        return list.stream().filter(s -> s.toLowerCase().contains(lowerLetter)).collect(Collectors.toUnmodifiableList());
 
     }
 }
