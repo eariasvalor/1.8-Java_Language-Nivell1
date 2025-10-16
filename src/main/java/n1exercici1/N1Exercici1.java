@@ -13,14 +13,15 @@ public class N1Exercici1 {
         names.add("Olga");
         names.add("Natalia");
 
-        IStringsFilter stringsFilter = () -> {
-            for (String s : names) {
-                if (s.toLowerCase().contains("o")) {
-                    System.out.println(s);
-                }
-            }
-        };
 
-        stringsFilter.filter();
+        Filter filter = new Filter();
+        List<String> filteredList = filter.filterByLetter(names, "o");
+        filteredList.forEach(System.out::println);
+
+
+
+
+
+
     }
 }
