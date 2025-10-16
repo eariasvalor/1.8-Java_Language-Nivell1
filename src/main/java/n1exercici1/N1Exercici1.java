@@ -13,7 +13,7 @@ public class N1Exercici1 {
         names.add("Olga");
         names.add("Natalia");
 
-        IStringsFilter filter = () -> {
+        IStringsFilter stringsFilter = () -> {
             for (String s : names) {
                 if (s.toLowerCase().contains("o")) {
                     System.out.println(s);
@@ -21,6 +21,6 @@ public class N1Exercici1 {
             }
         };
 
-        filter.filter();
+        stringsFilter.filter();
     }
 }
